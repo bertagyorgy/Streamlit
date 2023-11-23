@@ -33,5 +33,5 @@ def calculate():
  
     st.success(f"Eredmény: {ans}")
  
-if st.button("C"):
+if st.button("Kalkulálás"):
     calculate()
