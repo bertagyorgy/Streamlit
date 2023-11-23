@@ -1,33 +1,39 @@
 import streamlit as st
-
-st.title("Kalkulátor app Streamlitben")
-
+ 
+st.title("Calculator App using Streamlit")
+ 
+# creates a horizontal line
 st.write("---")
-
-szam1 = st.number_input(label="Első szám")
-szam2 = st.number_input(label="Második szám")
-
-st.write("Művelet kiválasztása")
-operation = st.radio("Add meg, milyen műveletet akarsz elvégezni:",
-                     ("Összeadás", "Kivonás", "Szorzás", "Osztás"))
+ 
+# input 1
+num1 = st.number_input(label="Enter first number")
+ 
+# input 2
+num2 = st.number_input(label="Enter second number")
+ 
+st.write("Operation")
+ 
+operation = st.radio("Select an operation to perform:",
+                    ("Add", "Subtract", "Multiply", "Divide"))
+ 
 ans = 0
-
-def kalkulálás():
-	if operation == "Összeadás":
-  		ans = szam1 + szam2
-	elif operation == "Kivonás":
-		ans = szam1 - szam2
-	elif operation == "Szorzás":
-		ans = szam1 * szam2
-	elif operation == "Osztás":
-		ans = szam1 / szam2
-
-  	st.success(f"Eredmény: {ans}")
- else:
-	st.warning("0val való osztás nem lehetséges")
-	ans = "Nincs értelmezve"
-if st.button("Eredmény kiszámolása"):
-	kalkulálás()
-     
+ 
+def calculate():
+    if operation == "Add":
+        ans = num1 + num2
+    elif operation == "Subtract":
+        ans = num1 - num2
+    elif operation == "Multiply":
+        ans = num1 * num2
+    elif operation=="Divide" and num2!=0:
+        ans = num1 / num2
+    else:
+        st.warning("Division by 0 error. Please enter a non-zero number.")
+        ans = "Not defined"
+ 
+    st.success(f"Answer = {ans}")
+ 
+if st.button("Calculate result"):
+    calculate()
    
     
