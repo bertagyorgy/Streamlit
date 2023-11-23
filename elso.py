@@ -28,6 +28,6 @@ def kalkulálás():
 	ans = "Nincs értelmezve"
 if st.button("Eredmény kiszámolása"):
 	kalkulálás()
-   
+     
    
     
