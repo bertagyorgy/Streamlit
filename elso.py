@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.write("Hello, *Éljenek a Gyurik*, :smile:")
+st.write("Hello, *Éljenek a Gyurik*, :skull:")
