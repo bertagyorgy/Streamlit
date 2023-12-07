@@ -6,18 +6,17 @@ import streamlit as st
 # st.text('Kiválasztva: {}'.format(2**level))
 
 st.header("Űrlap")
-nev = st.text_input("Írd be a neved")
-email = st.text_input("Írd be az e-mail címed")
-eletkor = st.slider("Add meg az életkorod", 1, 100)
+
+nev = st.text_input("Név")
+email = st.text_input("E-mail cím")
+eletkor = st.slider("Életkor", 1, 100)
 nem = st.radio("Nem: ", ('Fiú', 'Lány'))
 if (nem == 'Fiú'):
-	st.success("Sikeresen rögzítve: Fiú")
+	st.info("Sikeresen rögzítve: Fiú")
 else:
-	st.success("Sikeresen rögzítve: Lány")
+	st.info("Sikeresen rögzítve: Lány")
 
-
-st.button(".button: Click me for no reason")
-if(st.button(".button: About")):
-	st.text(".text: Welcome To GeeksForGeeks!!!")
+if(st.button("Beküldés")):
+	st.success("Válaszodat rögzítettük.")
    
     
