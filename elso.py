@@ -15,7 +15,11 @@ if (nem == 'Fiú'):
 	st.info("Sikeresen rögzítve: Fiú")
 else:
 	st.info("Sikeresen rögzítve: Lány")
+hobbik = st.multiselect("Hobbiaid:",
+	['Sportolás', 'Olvasás', 'Írás', 'Játék'])
 
+
+st.write("You selected", len(hobbies), 'hobbies')
 if(st.button("Beküldés")):
 	st.success("Válaszodat rögzítettük.")
    
