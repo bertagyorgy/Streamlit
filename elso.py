@@ -17,9 +17,8 @@ else:
 	st.info("Sikeresen rögzítve: Lány")
 hobbik = st.multiselect("Hobbiaid:",
 	['Sportolás', 'Olvasás', 'Írás', 'Játék'])
+st.write("Hobbik száma", len(hobbik), 'db')
 
-
-st.write("You selected", len(hobbies), 'hobbies')
 if(st.button("Beküldés")):
 	st.success("Válaszodat rögzítettük.")
    
