@@ -17,6 +17,6 @@ st.write("Hobbik száma", len(hobbik), 'db')
 
 if(st.button("Submit")):
 	st.write(nev, email, eletkor, nem, hobbik)
-	st.success("Válaszodat rögzítettük.")
+	st.success("Válaszát rögzítettük.")
    
     
