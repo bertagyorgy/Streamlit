@@ -10,11 +10,7 @@ st.header("Űrlap")
 nev = st.text_input("Név")
 email = st.text_input("E-mail cím")
 eletkor = st.slider("Életkor", 1, 100)
-nem = st.radio("Nem: ", ('Fiú', 'Lány'))
-if (nem == 'Fiú'):
-	st.info("Sikeresen rögzítve: Fiú")
-else:
-	st.info("Sikeresen rögzítve: Lány")
+nem = st.radio("Nem: ", ('Fiú', 'Lány', 'Nem szeretném közölni'))
 hobbik = st.multiselect("Hobbiaid:",
 	['Sportolás', 'Olvasás', 'Írás', 'Játék'])
 st.write("Hobbik száma", len(hobbik), 'db')
