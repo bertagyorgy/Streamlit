@@ -19,7 +19,7 @@ hobbik = st.multiselect("Hobbiaid:",
 	['Sportolás', 'Olvasás', 'Írás', 'Játék'])
 st.write("Hobbik száma", len(hobbik), 'db')
 
-if(st.button("Beküldés")):
+if(st.button("Submit")):
 	st.success("Válaszodat rögzítettük.")
    
     
